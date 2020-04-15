@@ -1,0 +1,22 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "nama": "Ferdinand",
+      "born": "Batam",
+      "death": "im alive",
+      "description": "still alive",
+      "established": "Not a Hero",
+      "url": "http://card.uib.ac.id/upload/rawimage/1931073_8ubxz76lip.png"
+    },
+    {
+      "nama": "test",
+      "born": "1234",
+      "death": "1231",
+      "description": "12331",
+      "established": "1231",
+      "url": "asdsad",
+      "id": 2
+    }
+  ]
+}
