@@ -4,6 +4,7 @@ import {useFormik} from 'formik';
 import {Card, Button, Form, Container, Row } from 'react-bootstrap';
 import './form.css';
 import styled from 'styled-components';
+import foto from './MerdekaKolom.webp'
 
 const FormHeroes = () =>{
     const formik = useFormik({
@@ -15,16 +16,18 @@ const FormHeroes = () =>{
             established: '',
             url: ''
         },
-        onSubmit: () =>{
-            axios.post('http://localhost:8000/heroes', formik.values)
+        onSubmit: (values, action) =>{
+            axios.post('http://localhost:8000/heroes', values);
+            action.resetForm();
         }
     })
+    
     return (
        <Container>
             <Row className="justify-content-md-center">
                 <Wrapper>
                     <Card className="text-left">
-                        <Card.Img variant="top" src="https://www.amalan.com/hubfs/Assets/Blog_Pictures/MerdekaKolom.jpeg"></Card.Img>
+                        <Card.Img variant="top" src={foto}></Card.Img>
                         <Card.Body>
                             <Form onSubmit={formik.handleSubmit}>
                                 <Form.Group>
@@ -91,8 +94,8 @@ const FormHeroes = () =>{
                             </Form>
                         </Card.Body>
                     </Card>
-        </Wrapper>
-        </Row>
+                </Wrapper>
+            </Row>
         </Container>
     )
     
